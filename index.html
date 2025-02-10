@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Search Application</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-[url('./assets/bg.jpg')] bg-center bg-cover relative">
+    <div class="fixed w-full h-full bg-black/10 backdrop-blur-md"></div>
+    <header class="relative">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-3 px-6 py-4 bg-black/60 shadow-lg">
+            <div class="logo flex items-center">
+                <!-- <img src="./assets/logo.png" alt="" class="w-[54px] h-auto text-white"> -->
+                <h1 class="font-bold uppercase text-white bg-black p-1">Black Ticket</h1>
+            </div>
+            <div class="search-div grow-1 flex justify-center">
+              <input id="movie-search-input" type="text" placeholder="Search for movies and more" class="bg-white px-2 lg:px-6 lg:py-1 w-full md:w-1/2 rounded border border-white focus:outline-none">
+              <!-- <button class="bg-[#111155] text-white px-3 py-1 md:px-8 md:py-1 rounded-r font-semibold cursor-pointer border border-white">Search</button> -->
+            </div>
+            <div class="btn-container self-end">
+              <button class="bg-[#111155] text-white px-3 py-1 md:px-8 md:py-1 rounded font-semibold cursor-pointer">Login</button>
+              <button class="bg-[#111155] text-white px-3 py-1 md:px-8 md:py-1 rounded font-semibold cursor-pointer">Register</button>
+            </div>
+        </div>
+    </header>
+    <main>
+      <div class="container mx-auto relative z-10">
+        <section class="intro-main text-white flex flex-col gap-3 md:flex-row justify-center items-center px-3 py-5 md:px-6 md:py-10 ">
+          <div class="w-full md:w-3/4">
+            <h1 class="text-xl md:text-5xl text-center md:text-left lg:text-7xl font-bold">Most Complete Movie Information Search Engine</h1>
+          </div>
+          <div class=" text-xs md:text-sm lg:text-base  flex flex-col gap-3 text-center md:text-left md:w-1/2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pulvinar erat in arcu tempor bibendum. Donec molestie quam ligula, et blandit diam scelerisque at. Cras quis auctor dui.</p>
+            <p>Phasellus aliquet dictum nulla ac scelerisque. Quisque convallis orci ac convallis venenatis. Nullam volutpat et nisi nec pulvinar. Pellentesque nulla tortor, auctor at accumsan ac, blandit ornare est. Aliquam eget faucibus tellus.</p>
+          </div>
+        </section>
+        <section class="movies-list grid grid-cols-5 gap-6 place-items-center px-3 py-5 md:px-6 md:py-10">
+        </section>
+        
+        <div id="pagination-controls" class="pagination-controls justify-center gap-4 mt-4 hidden">
+          <button id="prev-page" class="bg-gray-500 text-white px-4 py-2 rounded disabled:opacity-50">Previous</button>
+          <button id="next-page" class="bg-gray-500 text-white px-4 py-2 rounded disabled:opacity-50">Next</button>
+        </div>
+        
+        
+        <div class="movie-details-container hidden fixed top-0 left-0 w-full h-full bg-black/80 flex justify-center items-center">
+          <div class="movie-details bg-white p-6 rounded w-[90%] md:w-[50%]">
+            <button id="close-details" class="absolute top-2 right-2 bg-red-500 text-white px-3 py-1 rounded">Close</button>
+            <div id="movie-details-content"></div>
+          </div>
+        </div>
+        
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
