@@ -13,9 +13,6 @@ This is a movie search application that allows users to find movies using the OM
 ## 🚀 Demo
 [Live Demo](https://naveen-kumarj.github.io/movie-search-app/)
 
-## 📷 Screenshots
-(Add screenshots here)
-
 ## 🏗️ Tech Stack
 - **Frontend:** HTML, Tailwind CSS, JavaScript
 - **API:** [OMDB API](https://www.omdbapi.com/)
